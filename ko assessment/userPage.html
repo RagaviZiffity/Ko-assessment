@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UserPage</title>
+    <style>
+    .container {
+    font-family: Arial, sans-serif;
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+    text-align: center;
+    color: #333333;
+    }
+
+    .user-details {
+    margin-bottom: 15px;
+    }
+
+    .user-details label {
+    font-weight: bold;
+    color: #333333;
+    }
+
+    .user-details span {
+    display: block;
+    margin-top: 5px;
+    color: #666666;
+    }
+
+    .user-image {
+    text-align: center;
+    margin-bottom: 15px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    }
+
+    button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 3px;
+    border: none;
+    background-color: #4caf50;
+    color: #ffffff;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    }
+
+    button:hover {
+    background-color: #45a049;
+    }
+
+    #Logout {
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    }
+
+    #Logout:hover {
+    background-color: #45a049;
+    }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script data-main="userPage" src="customFolder/require.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>User Details</h1>
+        <div class="user-details">
+            <label>First Name:</label>
+            <span class="firstName" data-bind="text: firstName"></span>
+        </div>
+        <div class="user-details">
+            <label>Last Name:</label>
+            <span class="lastName" data-bind="text: lastName"></span>
+            <input type="text" data-bind="value: getlastname" class="getlastname">
+            <button class="editlastname" data-bind="click: editlastname">Edit</button>
+        </div>
+        <div class="user-details">
+            <label>Email:</label>
+            <span class="email" data-bind="text: email"></span>
+        </div>
+        <div class="user-details">
+            <label>Password:</label>
+            <span class="passWord" data-bind="text: passWord"></span><br>
+            Current password: <input type="password" data-bind="value: getOldPassword" class="getOldPassword">
+            New password: <input type="password" data-bind="value: enterNewPass" class="enterNewPass">
+            Confirm password: <input type="password" data-bind="value: conformNewPass" class="conformNewPass">
+            <button class="editpassword" data-bind="click: editpassword">Edit</button>
+        </div>
+        <div class="user-details">
+            <label>Date of Birth:</label>
+            <span class="dob" data-bind="text: dob"></span>
+        </div>
+        <div class="user-details">
+            <label>City:</label>
+            <span class="city" data-bind="text: city"></span>
+        </div>
+        <div class="user-details">
+            <label>State:</label>
+            <span class="state" data-bind="text: state"></span>
+        </div>
+        <div class="user-image">
+
+
+        </div>
+        <button id="Logout" data-bind="click: Logout">Logout</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HomePage</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script data-main="homePage" src="customFolder/require.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        
+        form {
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333333;
+        }
+        
+        label {
+            display: inline-block;
+            margin-bottom: 5px;
+            color: #333333;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="file"],
+        input[type="password"]
+        {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #cccccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        
+        input[type="submit"],
+        input[type="button"] {
+            background-color: #4CAF50;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h1>Registration</h1>
+        <label for="firstName">First Name:</label>
+        <input type="text" data-bind="value: firstName" id="firstName" placeholder="First Name" required/><br>
+        <label for="lastName">Last Name:</label>
+        <input type="text" data-bind="value: lastName" id="lastName" placeholder="Last Name" required/><br>
+        <label for="emailId">Email:</label>
+        <input type="email" data-bind="value: emailId" id="emailId" placeholder="Email ID" required/><br>
+        <label for="Password">Password:</label>
+        <input type="password" data-bind="value: passWord" id="passWord" placeholder="Password" required/><br>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" data-bind="value: dob" id="dob" placeholder="Date of Birth" required/><br>
+        <label for="image">Image:</label>
+        <input type="file" data-bind="value: image" id="image" placeholder="Image" required/><br>
+        <label for="city">City:</label>
+        <input type="text" data-bind="value: city" id="city" placeholder="City" required/><br>
+        <label for="state">State:</label>
+        <input type="text" data-bind="value: state" id="state" placeholder="State" required/><br>
+        <input type="submit" value="Submit" data-bind="click: registerUser">
+        <input type="button" data-bind="click: loginButton" id="loginButton" value="Login">
+        <input type="button" data-bind="click: adminButton" id="adminButton" value="Admin login">
+    </form>
+</body>
+</html>
