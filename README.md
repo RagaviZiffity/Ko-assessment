@@ -22,8 +22,8 @@ Employee Portal and Record keeping app
 2. Open the homePage.html file in a web browser.
 
 # Project Structure
-homePage.html: Register page to fill employee details
-Loginpage.html: Login page for already existing employee id
-userPage.html: If the login credentials are true, user details will display 
-adminLoginpage.html: Login page for admins
-adminPage.html: I used pagination to view user details and given search
+** homePage.html: Register page to fill employee details
+** Loginpage.html: Login page for already existing employee id
+** userPage.html: If the login credentials are true, user details will display 
+** adminLoginpage.html: Login page for admins
+** adminPage.html: I used pagination to view user details and given search
